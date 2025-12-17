@@ -1,0 +1,1 @@
+export const buttonCaps = ["About me", "Projects", "Skills", "Contact Me"];
