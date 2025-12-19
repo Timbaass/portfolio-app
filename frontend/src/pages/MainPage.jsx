@@ -1,6 +1,7 @@
 import { contactData } from "../../data.js";
 import Contact from "../components/ui/Contact.jsx";
 import profilePicture from "../assets/profile-picture.png";
+import SkillsPart from "../components/layouts/SkillsPart.jsx";
 
 export default function MainPage() {
   return (
@@ -19,9 +20,14 @@ export default function MainPage() {
           </div>
         </div>
         <div className="inline-flex items-center justify-center max-w-90 mr-12">
-          <img src={profilePicture} alt="Profile Picture" className="rounded-full"/>
+          <img
+            src={profilePicture}
+            alt="Profile Picture"
+            className="rounded-full"
+          />
         </div>
       </div>
+      <SkillsPart />
     </div>
   );
 }
