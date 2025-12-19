@@ -5,14 +5,14 @@ import Button from "../ui/Button";
 export default function Header() {
   return (
     <header className="w-full py-6">
-      <div className="flex justify-between mx-auto max-w-6xl items-center text-white">
-        <a href="/" className="flex items-center">
+      <div className="flex justify-between mx-auto max-w-6xl items-center text-white px-6">
+        <a href="/" className="flex items-center min-w-32">
           <img src={portfolio_logo} alt="Portfolio Logo" className="w-32" />
         </a>
         <div className="flex gap-8 text-sm">
-          {buttonCaps.map(buttonCap => {
+          {buttonCaps.map((buttonCap, index) => {
             return (
-              <Button buttonCap={buttonCap}/>
+              <Button key={index} buttonCap={buttonCap}/>
             )
           })}
         </div>
