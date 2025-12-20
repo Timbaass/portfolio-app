@@ -10,6 +10,7 @@ import jsLogo from "./src/assets/js-logo.svg";
 import nodejsLogo from "./src/assets/nodejs-logo.svg";
 import pythonLogo from "./src/assets/python-logo.svg";
 import reactLogo from "./src/assets/react-logo.svg";
+import todoProject from "./src/assets/to-do-project.png";
 
 export const buttonCaps = ["About me", "Projects", "Skills", "Contact Me"];
 
@@ -42,3 +43,7 @@ export const logos = [
   { name: "Git", icon: gitLogo },
   { name: "Bash", icon: bashLogo },
 ];
+
+export const projectsData = [
+  { title: "To-Do App", url: "https://github.com/Timbaass/To-Do-App?tab=readme-ov-file", img: todoProject, }
+]

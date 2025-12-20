@@ -2,6 +2,7 @@ import { contactData } from "../../data.js";
 import Contact from "../components/ui/Contact.jsx";
 import profilePicture from "../assets/profile-picture.png";
 import SkillsPart from "../components/layouts/SkillsPart.jsx";
+import ProjectPart from "../components/layouts/ProjectsPart.jsx";
 
 export default function MainPage() {
   return (
@@ -28,6 +29,7 @@ export default function MainPage() {
         </div>
       </div>
       <SkillsPart />
+      <ProjectPart />
     </div>
   );
 }
