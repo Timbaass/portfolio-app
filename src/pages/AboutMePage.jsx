@@ -30,17 +30,17 @@ function AboutMePage() {
 
   return (
     <div className="w-full py-12">
-      <div className="max-w-6xl mx-auto px-12 text-white">
+      <div className="max-w-6xl mx-auto px-6 sm:px-12 text-white">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
-          <div className="w-48 h-48 flex-shrink-0">
+          <div className="w-32 h-32 sm:w-48 sm:h-48 flex-shrink-0">
             <img
               src={profilePicture}
               alt="Özgür Meşe"
               className="rounded-full w-full h-full object-cover border-4 border-stone-700"
             />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl font-bold mb-4">About Me</h1>
             <p className="text-stone-300 text-lg leading-relaxed">
               I am a Computer Engineering student at Marmara University
@@ -51,7 +51,7 @@ function AboutMePage() {
               I enjoy building full-stack applications and exploring AI
               technologies to create innovative solutions.
             </p>
-            <div className="flex gap-3 mt-6">
+            <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-6">
               {contactData.map((contact) => (
                 <Contact key={contact.name} contactData={contact} />
               ))}
@@ -70,7 +70,7 @@ function AboutMePage() {
                 <h3 className="text-xl font-semibold">{education.school}</h3>
                 <p className="text-stone-400">{education.degree}</p>
               </div>
-              <div className="text-right">
+              <div className="text-left md:text-right">
                 <p className="text-stone-300 font-medium">{education.date}</p>
                 <p className="text-stone-400">GPA: {education.gpa}</p>
               </div>
@@ -87,7 +87,7 @@ function AboutMePage() {
             {certificates.map((cert, index) => (
               <div
                 key={index}
-                className="bg-stone-800/50 rounded-2xl p-6 border border-stone-700 hover:border-stone-500 transition-colors"
+                className="bg-stone-800/50 rounded-2xl p-4 sm:p-6 border border-stone-700 hover:border-stone-500 transition-colors"
               >
                 <div className="flex flex-col md:flex-row justify-between md:items-center gap-2">
                   <div>

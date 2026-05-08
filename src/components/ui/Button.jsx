@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 export default function Button({ buttonCap, ...props }) {
   const location = useLocation();
   const navigate = useNavigate();
-  let cssClass = "text-lg cursor-pointer px-6 py-2.5 font-medium";
+  let cssClass = "text-sm sm:text-lg cursor-pointer px-3 sm:px-6 py-2 sm:py-2.5 font-medium whitespace-nowrap";
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
