@@ -1,14 +1,13 @@
-export default function Contact({contactData}) {
+export default function Contact({ contactData }) {
   return (
-    <div>
-      <a
-        href={contactData.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-stone-200 rounded-xl hover:bg-stone-400 transition-colors"
-      >
-        <img src={contactData.icon} alt={contactData.name} className="w-5 sm:w-6" />
-      </a>
-    </div>
+    <a
+      href={contactData.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center w-11 h-11 rounded-lg bg-white/10 border border-white/5 hover:bg-white/20 hover:border-white/15 active:scale-95 transition-all duration-200"
+      aria-label={contactData.name}
+    >
+      <img src={contactData.icon} alt={contactData.name} className="w-[18px] sm:w-5 brightness-90 invert" />
+    </a>
   );
 }

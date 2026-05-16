@@ -6,28 +6,35 @@ import ProjectPart from "../components/layouts/ProjectsPart.jsx";
 
 export default function MainPage() {
   return (
-    <div className="w-full py-8 sm:py-6">
-      <div className="flex flex-col-reverse sm:flex-row justify-between items-center max-w-6xl text-white m-auto px-6 sm:px-12 py-6 gap-8 sm:gap-0">
+    <div className="w-full">
+      {/* Hero Section */}
+      <section className="flex flex-col-reverse sm:flex-row justify-between items-center max-w-6xl text-text-primary m-auto px-6 sm:px-12 py-12 sm:py-24 gap-8 sm:gap-12">
         <div className="flex flex-col gap-4 text-center sm:text-left">
-          <h1 className="text-3xl sm:text-5xl mb-3 sm:mb-6">Hi, I am</h1>
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-wide sm:tracking-wider">Özgür Meşe</h1>
-          <h2 className="text-stone-400 text-lg sm:text-2xl">
+          <p className="text-text-secondary text-base sm:text-xl font-light tracking-wide">
+            Hi, I am
+          </p>
+          <h1 className="text-[2.5rem] leading-tight sm:text-6xl font-bold tracking-tight">
+            Özgür Meşe
+          </h1>
+          <h2 className="text-text-muted text-sm sm:text-xl font-normal">
             Full Stack Developer | AI Engineer
           </h2>
-          <div className="flex flex-row flex-wrap justify-center sm:justify-start gap-2 mt-4 sm:mt-6">
+          <div className="flex flex-row flex-wrap justify-center sm:justify-start gap-3 mt-3 sm:mt-5">
             {contactData.map((contact) => {
               return <Contact key={contact.name} contactData={contact} />;
             })}
           </div>
         </div>
-        <div className="inline-flex items-center justify-center w-40 h-40 sm:w-64 sm:h-64">
-          <img
-            src={profilePicture}
-            alt="Profile Picture"
-            className="rounded-full w-full h-full object-cover"
-          />
+        <div className="flex-shrink-0">
+          <div className="w-36 h-36 sm:w-56 sm:h-56 rounded-full ring-2 ring-white/10 ring-offset-4 ring-offset-surface overflow-hidden">
+            <img
+              src={profilePicture}
+              alt="Özgür Meşe"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
-      </div>
+      </section>
       <SkillsPart />
       <ProjectPart />
     </div>
